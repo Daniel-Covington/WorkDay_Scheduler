@@ -18,7 +18,7 @@ function generateTimeBlocks(startHour, endHour) {
   }
 }
 
-function showMessage(duration = 4000) {
+function showMessage(duration = 5000) {
   $('#message').removeClass('d-none');
   setTimeout(() => {
     $('#message').addClass('d-none');
