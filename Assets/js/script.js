@@ -18,6 +18,14 @@ function generateTimeBlocks(startHour, endHour) {
   }
 }
 
+function showMessage(duration = 4000) {
+  $('#message').removeClass('d-none');
+  setTimeout(() => {
+    $('#message').addClass('d-none');
+  }, duration);
+}
+
+
 $(function () {
   generateTimeBlocks(6, 18);
 
@@ -48,5 +56,6 @@ $('.saveBtn').on('click', function () {
   const description = parentDiv.find('.description').val();
 
 localStorage.setItem(blockHour, description);
+showMessage();
 });
 });
